@@ -1,0 +1,13 @@
+name: res_group
+on:
+  push: 
+    branches:
+    - master
+    - 'features/**'
+permissions:
+  id-token: write
+  contents: read     
+jobs: 
+  terraform_init:
+    name: init
+    runs-on: self-hosted   
